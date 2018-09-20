@@ -1,0 +1,15 @@
+<div>
+  <ul>
+    <li>Counter <span class="counter">{{count}}</span></li>
+  </ul>
+</div>
+
+<div>
+  <h3>Currency Summary</h3>
+  <ul>
+    <li *ngFor="let u of objkeys(summary)">
+      <b>{{u}}</b> : {{summary[u]}}
+    </li>
+  </ul>
+</div>
+

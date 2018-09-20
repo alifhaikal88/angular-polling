@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="sidebar">
+    <app-sidebar [users]="users['body']"></app-sidebar>
+  </div>
+  <div class="main">
+    <h1>Count users using polling</h1>
+
+    <table border="1">
+      <thead>
+      <tr>
+        <td>execution id</td>
+        <td>wallet id</td>
+        <td>amount</td>
+        <td>type id</td>
+        <td>currency id</td>
+        <td></td>
+      </tr>
+      </thead>
+      <tr *ngFor="let u of users['body']" style="width: 500px">
+        <td>{{u.executionId}}</td>
+        <td>{{u.walletId}}</td>
+        <td>{{u.amount | currency:'RM'}}</td>
+        <td>{{u.typeId}}</td>
+        <td>{{u.currencyId}}</td>
+        <td><input type="button" value="Remove" (click)="remove(u.id)"></td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+
