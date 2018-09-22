@@ -9,8 +9,7 @@ import 'rxjs/add/observable/timer';
 })
 export class AppComponent implements OnInit {
   users = {};
-  second = 0;
-  count = 0;
+  disableDiv = false;
 
   constructor(public http: HttpClient) {
   }
@@ -174,6 +173,9 @@ export class AppComponent implements OnInit {
     };
   }
 
+  toggleDiv() {
+    this.disableDiv = !this.disableDiv;
+  }
 
   remove(name) {
     this.users['body'].splice(this.users['body'].findIndex(u => u.id === name), 1);

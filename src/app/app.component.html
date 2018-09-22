@@ -27,5 +27,20 @@
     </table>
 
   </div>
+  <div class="main">
+    <select name="" id="" (change)="toggleDiv()">
+      <option value="true">Enable</option>
+      <option value="false">Disable</option>
+    </select>
+
+    <div [disableDiv]="disableDiv">
+      <h1>disabled div</h1>
+      <label for="t">
+        Input
+      </label>
+      <input type="text" name="t" id="t">
+      <button type="submit">Buton</button>
+    </div>
+  </div>
 </div>
 
