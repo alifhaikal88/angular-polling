@@ -180,4 +180,9 @@ export class AppComponent implements OnInit {
   remove(name) {
     this.users['body'].splice(this.users['body'].findIndex(u => u.id === name), 1);
   }
+
+
+  alertx(str) {
+    alert(str);
+  }
 }
