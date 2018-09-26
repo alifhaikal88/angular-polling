@@ -11,16 +11,15 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
   MatSelectModule,
   MatSidenavModule,
   MatSlideToggleModule,
-  MatSnackBarConfig,
   MatSnackBarModule,
   MatTabsModule,
   MatToolbarModule,
-  MatTooltipModule ,
-  MatProgressSpinnerModule,
-  MatProgressBarModule
+  MatTooltipModule
 } from '@angular/material';
 
 import {AppComponent} from './app.component';
@@ -29,6 +28,7 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import {CommonModule} from '@angular/common';
 import {DisableDivDirective} from './disable-div.directive';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
 
 const MATERIAL_MODULES: any[] = [
   MatButtonModule, MatCardModule, MatIconModule,
@@ -51,7 +51,8 @@ const MATERIAL_MODULES: any[] = [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MATERIAL_MODULES
+    MATERIAL_MODULES,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

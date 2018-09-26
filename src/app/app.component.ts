@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/observable/timer';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ import 'rxjs/add/observable/timer';
 export class AppComponent implements OnInit {
   users = {};
   disableDiv = false;
+
+  formKeys = ['test key'];
 
   constructor(public http: HttpClient) {
   }
@@ -181,6 +184,12 @@ export class AppComponent implements OnInit {
     this.users['body'].splice(this.users['body'].findIndex(u => u.id === name), 1);
   }
 
+  makeObservableForm() {
+    setTimeout(_ => {
+
+
+    }, 1000);
+  }
 
   alertx(str) {
     alert(str);

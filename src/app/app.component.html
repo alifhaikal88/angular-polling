@@ -44,5 +44,15 @@
       </button>
     </div>
   </div>
+  <div class="main">
+    <form #f="ngForm">
+      <div *ngFor="let i of ['test key']; let idx = index">
+        <input type="text" name="{{i}}" [ngModel]="" required>
+      </div>
+
+      is dirty? : {{f.controls['test key']?.dirty}}
+
+    </form>
+  </div>
 </div>
 
