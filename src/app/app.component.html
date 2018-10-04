@@ -1,3 +1,7 @@
+
+<router-outlet></router-outlet>
+
+
 <div class="wrapper">
   <div class="sidebar">
     <app-sidebar [users]="users['body']"></app-sidebar>
@@ -28,7 +32,7 @@
 
   </div>
   <div class="main">
-    <select name="" id="" (change)="toggleDiv()">
+    <select name id (change)="toggleDiv()">
       <option value="true">Enable</option>
       <option value="false">Disable</option>
     </select>
@@ -47,12 +51,31 @@
   <div class="main">
     <form #f="ngForm">
       <div *ngFor="let i of ['test key']; let idx = index">
-        <input type="text" name="{{i}}" [ngModel]="" required>
+        <input type="text" name="{{i}}" [ngModel] required>
       </div>
 
       is dirty? : {{f.controls['test key']?.dirty}}
 
     </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <span #sayIt></span>
+    <div *ngIf="true" (click)="sayIt.innerText = 'WOW!'">
+      <button mat-raised-button
+              [color]="primary"
+              [disabled]="true">Exchange
+      </button>
+
+      <button mat-raised-button (click)="hidopUmno()">
+        Hidop UMNO!
+      </button>
+    </div>
+
+
   </div>
 </div>
 
